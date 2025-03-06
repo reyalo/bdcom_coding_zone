@@ -1,0 +1,18 @@
+
+movl $1, -24 (%ebp)
+movl $2, -20(%ebp)
+movl $3, -16(%ebp)
+movl $4, -12(%ebp)
+movl $5, -8(%ebp)
+leal -24(%ebp), %eax
+addl $8, %eax
+movl %eax, -4(%ebp)
+movl $11, -20(%ebp)
+movl -4(%ebp), %eax
+addl $4, %eax
+movl $22, (%eax)
+movl $33, -16(%ebp)
+movl -4(%ebp), %eax
+addl $8, %eax
+movl $44, (%eax)
+movl $0, %eax
