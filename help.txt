@@ -1,0 +1,1 @@
+gcc -m32 -S p9.c -o p9.s

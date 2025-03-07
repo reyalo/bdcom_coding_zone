@@ -1,0 +1,27 @@
+	.file	"p9.c"
+	.text
+	.section .rdata,"dr"
+LC0:
+	.ascii "Hello World\0"
+	.text
+	.globl	_main
+	.def	_main;	.scl	2;	.type	32;	.endef
+_main:
+	pushl	%ebp
+	movl	%esp, %ebp
+	andl	$-16, %esp
+	subl	$16, %esp
+	call	___main
+	movl	$LC0, 12(%esp)
+	movl	$1819043144, (%esp)
+	movl	$1867980911, 4(%esp)
+	movl	$6581362, 8(%esp)
+	movl	12(%esp), %eax
+	addl	$2, %eax
+	movb	$11, (%eax)
+	movb	$22, 2(%esp)
+	movl	$0, %eax
+	leave
+	ret
+	.def	___main;	.scl	2;	.type	32;	.endef
+	.ident	"GCC: (GNU) 14.1.0"
