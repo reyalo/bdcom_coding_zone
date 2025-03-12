@@ -1,0 +1,8 @@
+SMAC: 90:6f:18:02:05:da | DMAC: 98:45:62:bb:a4:99 | SIP: 192.168.100.158 | DIP: 192.168.90.253 | Ref Count: 2
+SMAC: 98:45:62:d6:a1:6c | DMAC: 90:6f:18:02:05:da | SIP: 192.168.90.253 | DIP: 192.168.100.158 | Ref Count: 2
+SMAC: 98:45:62:d6:a1:6c | DMAC: 90:6f:18:02:05:da | SIP: 192.168.90.200 | DIP: 192.168.100.158 | Ref Count: 1
+SMAC: 90:6f:18:02:05:da | DMAC: 98:45:62:bb:a4:99 | SIP: 192.168.100.158 | DIP: 192.168.90.200 | Ref Count: 1
+SMAC: 90:6f:18:02:05:da | DMAC: 98:45:62:bb:a4:99 | SIP: 192.168.100.158 | DIP: 142.250.193.138 | Ref Count: 2
+SMAC: 90:6f:18:02:05:da | DMAC: 98:45:62:bb:a4:99 | SIP: 192.168.100.158 | DIP: 142.250.195.99 | Ref Count: 2
+
+Total packets processed: 6

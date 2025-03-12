@@ -1,0 +1,23 @@
+Failed to extract MACs from line: No.     Time           Source                Destination           Protocol Length Info
+Failed to extract MACs from line:     113 3.549702       192.168.100.158       142.250.195.99        UDP      142    65316 → 443 Len=100
+Failed to extract MACs from line: 
+Failed to extract MACs from line: Frame 113: 142 bytes on wire (1136 bits), 142 bytes captured (1136 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Extracted IPs: SIP: 192.168.100.158, DIP: 142.250.195.99
+Converting source IP: 192.168.100.158
+Converting destination IP: 142.250.195.99
+Destination IP length: 15
+dst_ip_str[0]: 1 (0x31)
+dst_ip_str[1]: 4 (0x34)
+dst_ip_str[2]: 2 (0x32)
+dst_ip_str[3]: . (0x2e)
+dst_ip_str[4]: 2 (0x32)
+dst_ip_str[5]: 5 (0x35)
+dst_ip_str[6]: 0 (0x30)
+dst_ip_str[7]: . (0x2e)
+dst_ip_str[8]: 1 (0x31)
+dst_ip_str[9]: 9 (0x39)
+dst_ip_str[10]: 5 (0x35)
+dst_ip_str[11]: . (0x2e)
+dst_ip_str[12]: 9 (0x39)
+dst_ip_str[13]: 9 (0x39)
+dst_ip_str[14]:  (0x0d)

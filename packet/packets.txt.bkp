@@ -1,0 +1,272 @@
+No.     Time           Source                Destination           Protocol Length Info
+    113 3.549702       192.168.100.158       142.250.195.99        UDP      142    65316 → 443 Len=100
+
+Frame 113: 142 bytes on wire (1136 bits), 142 bytes captured (1136 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 142.250.195.99
+User Datagram Protocol, Src Port: 65316, Dst Port: 443
+Data (100 bytes)
+
+0000  44 fb 4f 49 71 a7 9d 58 79 d2 ae a1 54 bf 86 f3   D.OIq..Xy...T...
+0010  a8 3b 76 7b 82 bf 98 1e df ca 6a ab c9 16 54 c9   .;v{......j...T.
+0020  71 1f 72 02 bd a2 ca 62 d8 ec 6b bb 45 7d d0 ae   q.r....b..k.E}..
+0030  25 e5 36 b8 f1 01 e5 84 53 4d 81 fa d0 43 ae b5   %.6.....SM...C..
+0040  9b ba 85 af 0b 9d 46 53 98 7d f7 9b b5 a2 be 49   ......FS.}.....I
+0050  52 a8 5b b1 87 fe 0a c0 de a6 3f 70 3a d3 5e a9   R.[.......?p:.^.
+0060  0e 7e 0e 8d                                       .~..
+
+No.     Time           Source                Destination           Protocol Length Info
+    114 3.551338       192.168.100.158       142.250.195.99        UDP      344    65316 → 443 Len=302
+
+Frame 114: 344 bytes on wire (2752 bits), 344 bytes captured (2752 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 142.250.195.99
+User Datagram Protocol, Src Port: 65316, Dst Port: 443
+Data (302 bytes)
+
+0000  57 fb 4f 49 71 a7 9d 58 79 1a de 62 7d c5 6f 98   W.OIq..Xy..b}.o.
+0010  d8 89 d8 60 0f dd 2f fb d0 ff 92 27 09 99 58 53   ...`../....'..XS
+0020  f3 cf 27 f3 a8 85 9f 9e 72 f5 90 85 b3 7a 63 f1   ..'.....r....zc.
+0030  3a cc 9c 11 ce fb 84 40 d4 3c 34 1b b5 00 2e 8d   :......@.<4.....
+0040  12 4c 88 a5 b1 f1 32 99 75 3e a4 1f 68 54 a7 d4   .L....2.u>..hT..
+0050  b0 7e d6 d3 06 aa c3 09 88 d4 06 62 b2 6c aa 00   .~.........b.l..
+0060  3a 22 88 4b e4 2f dc 98 ce 9b 0e 33 64 74 07 ce   :".K./.....3dt..
+0070  b4 0c cd f9 7f 9b 36 a6 22 6d 82 67 91 cf bc 20   ......6."m.g... 
+0080  39 44 db 67 ed 78 11 05 d8 68 f0 8b bc 79 e7 13   9D.g.x...h...y..
+0090  f3 a6 4d c0 68 6f 81 6c ac ee 4e a9 11 1d be 6e   ..M.ho.l..N....n
+00a0  e9 82 2c 5b 9e aa b9 a9 ec ba ee 26 5a 75 48 79   ..,[.......&ZuHy
+00b0  64 40 69 63 5c 13 49 a8 99 21 22 0c 5d f1 53 b5   d@ic\.I..!".].S.
+00c0  bf 55 c0 7a 92 ec e2 0b e3 1c ef c7 50 54 41 5c   .U.z........PTA\
+00d0  07 ff ee f5 3e a3 33 a3 49 05 46 23 47 79 a1 c1   ....>.3.I.F#Gy..
+00e0  a2 3f 68 57 c8 cb 11 6f d1 50 6b 57 fa b1 40 88   .?hW...o.PkW..@.
+00f0  e6 cb 47 1b eb 4a b1 20 e3 00 0d be c0 50 58 8d   ..G..J. .....PX.
+0100  09 89 65 a0 57 09 c5 ab 12 1b bf 8c ee 45 f8 e8   ..e.W........E..
+0110  ac 2e fa 92 25 3f 94 24 11 5b ae ee 58 3f ea 87   ....%?.$.[..X?..
+0120  b6 3b 0d 61 66 0c 2e e7 9a f5 21 73 e1 be         .;.af.....!s..
+
+No.     Time           Source                Destination           Protocol Length Info
+    115 3.564184       192.168.100.158       142.250.193.138       UDP      1285   62536 → 443 Len=1243
+
+Frame 115: 1285 bytes on wire (10280 bits), 1285 bytes captured (10280 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 142.250.193.138
+User Datagram Protocol, Src Port: 62536, Dst Port: 443
+Data (1243 bytes)
+
+0000  43 f7 0b fd 94 70 e6 02 08 39 48 a0 67 ba af 43   C....p...9H.g..C
+0010  70 12 37 0e f0 ae 3c 38 fa ec 36 60 3d 8d f1 fa   p.7...<8..6`=...
+0020  fc 38 dd 92 95 1f 06 a1 83 80 c1 47 55 88 d4 90   .8.........GU...
+0030  6d 03 31 ab 6c 13 5c c0 53 d0 fc 99 6b c5 98 3f   m.1.l.\.S...k..?
+0040  b9 c3 62 9d 6e e4 58 c0 ff 59 ed 6b 18 92 96 40   ..b.n.X..Y.k...@
+0050  e9 f0 80 d1 fa 68 96 3a d9 0d 91 fc 98 14 18 bf   .....h.:........
+0060  fa 27 86 a6 cc 55 64 a0 f0 98 78 c9 24 be 3a a8   .'...Ud...x.$.:.
+0070  5b c1 84 81 53 74 ab 94 d6 c2 7a 27 6f dd a5 a7   [...St....z'o...
+0080  fd a3 a6 2e 1a f2 a2 8e bc 3d 56 c9 48 75 48 7f   .........=V.HuH.
+0090  40 bc aa dc 55 c7 2e 45 94 62 f3 fb a7 40 ad 63   @...U..E.b...@.c
+00a0  4b 1f 47 a3 9c e1 70 f4 7b 89 d3 e4 8a b5 cd b3   K.G...p.{.......
+00b0  78 44 40 22 3a a9 ff 50 fb c9 9b 54 19 d7 8c 30   xD@":..P...T...0
+00c0  a3 3f 20 e3 00 28 10 df 80 96 65 d6 50 ac 53 cc   .? ..(....e.P.S.
+00d0  18 fc 50 4c ef 02 a8 30 40 7b 54 68 0c a1 e6 61   ..PL...0@{Th...a
+00e0  56 b5 e3 1b c6 a3 06 ee 18 4e f1 a8 4f ec b4 c9   V........N..O...
+00f0  4d 9d be b6 08 55 e0 15 8a 50 79 98 47 c6 81 9c   M....U...Py.G...
+0100  1d f9 d4 d9 40 da 61 d1 53 5c 16 a2 a3 44 89 33   ....@.a.S\...D.3
+0110  e7 d1 21 1c 4a 08 be c1 34 05 cc 2f d2 5a 7a d8   ..!.J...4../.Zz.
+0120  e9 ba 8e b7 22 5b aa 48 54 a9 ae 08 e5 98 71 9c   ...."[.HT.....q.
+0130  58 91 f8 99 52 f9 ad ba dc 44 99 3e e9 1f 2a 08   X...R....D.>..*.
+0140  42 04 ae 09 8b 8b 1b 65 8b d2 a8 f0 d5 61 92 27   B......e.....a.'
+0150  4a 6d 04 a7 e7 0c a7 a6 c2 02 f9 04 f2 6c 13 72   Jm...........l.r
+0160  e9 85 3c e3 72 c9 7a c4 40 01 04 40 c9 67 0e 12   ..<.r.z.@..@.g..
+0170  c5 f6 9f 66 ab 13 72 7f 4b c3 07 41 20 6b 08 5d   ...f..r.K..A k.]
+0180  58 ae 37 52 b0 4b c9 75 76 22 74 03 8b 83 8d 2e   X.7R.K.uv"t.....
+0190  82 19 37 95 02 d2 83 72 6f 60 63 42 1d 3c 02 f4   ..7....ro`cB.<..
+01a0  1c c7 c8 07 b9 71 17 92 6d 76 a5 ce a2 5d 9f 66   .....q..mv...].f
+01b0  eb e6 46 9c 1f 5e 35 95 77 e9 c0 1f 0b 53 64 95   ..F..^5.w....Sd.
+01c0  73 94 9a 09 77 a8 6a 09 dd 3e 24 36 5d 5c a1 ec   s...w.j..>$6]\..
+01d0  83 5f 83 8a 98 d7 db ee e9 d8 8c c0 bb bb 87 da   ._..............
+01e0  81 a2 6e b7 05 08 e6 02 82 55 d2 35 38 2c f8 64   ..n......U.58,.d
+01f0  57 31 1c 26 c4 f6 29 48 17 2e b6 ae f9 95 d8 b7   W1.&..)H........
+0200  c9 e0 42 ff 21 6f 05 a4 f3 d0 c2 3f 4e 93 c7 7f   ..B.!o.....?N...
+0210  3d 1f 6f 36 fa 2b 6b 53 37 73 64 1b 56 90 3d 07   =.o6.+kS7sd.V.=.
+0220  91 43 64 b9 db 14 b1 d1 e5 d5 19 f2 61 69 39 21   .Cd.........ai9!
+0230  7a 25 ae fd 90 f5 65 cf 27 9e 69 3a b5 df 5e b9   z%....e.'.i:..^.
+0240  74 19 04 8d 99 3e 05 86 21 a6 8b 5f 71 67 e9 46   t....>..!.._qg.F
+0250  0e dc 80 6e c9 05 b1 48 85 6d 92 9d 0c 4e 28 22   ...n...H.m...N("
+0260  71 ef 6b 4a 06 02 bb 5c d3 26 b6 6e e5 fa 2b a1   q.kJ...\.&.n..+.
+0270  33 f8 37 02 a0 3c bf f7 cb 35 ca ee 37 65 02 80   3.7..<...5..7e..
+0280  8b 50 ab 29 db f5 2b d5 a0 b5 dd 28 76 47 3f b5   .P.)..+....(vG?.
+0290  b8 e6 86 88 02 98 08 e2 ef 81 74 32 5e fa 16 04   ..........t2^...
+02a0  d0 fb 0b 8f b1 d7 27 53 d0 42 e2 1e 90 be ff e1   ......'S.B......
+02b0  70 ac 0c 91 1e 26 0b 9c 3e 19 7a 22 9f 05 33 8d   p....&..>.z"..3.
+02c0  07 76 7f cf fd d3 f2 31 d4 1b 50 21 01 ba d9 4f   .v.....1..P!...O
+02d0  a7 9b 93 15 cc 9f e6 63 90 ad 2e bd 40 ce a9 f6   .......c....@...
+02e0  5d e8 06 5a a5 ff e1 28 f8 eb ac d7 8d bf 97 67   ]..Z...(.......g
+02f0  e9 d7 c6 ab d0 4c 4b 21 85 5e 93 3f 72 45 a1 f4   .....LK!.^.?rE..
+0300  02 a6 4a 87 76 35 47 50 26 5b db eb 9c 5d 61 0b   ..J.v5GP&[...]a.
+0310  05 c1 23 4d 70 b0 90 4c 7e 9f d0 6d 80 e5 21 73   ..#Mp..L~..m..!s
+0320  8c 53 d6 74 af a9 bb 5a ce cc 3c 4c 0a fd cc 5f   .S.t...Z..<L..._
+0330  ca f0 b6 86 f3 0d 3d 82 14 72 f9 4d 4c 90 3e ee   ......=..r.ML.>.
+0340  ad 3d 5b 26 f3 00 fa fe ca 80 64 2d 8f 9b a5 e7   .=[&......d-....
+0350  f2 a9 37 26 43 9d 54 10 4d ee 66 5a 3f 0f d8 88   ..7&C.T.M.fZ?...
+0360  d1 57 de 62 c3 af 6a e7 82 56 bf df ae fe 31 90   .W.b..j..V....1.
+0370  d4 2a bd 1e dd 0e da 2e 82 a5 1f b3 06 76 00 c6   .*...........v..
+0380  ea e4 fc 60 42 82 3f f4 62 5d 7c cb 71 5c de 2c   ...`B.?.b]|.q\.,
+0390  a4 1d 3f a5 9d 63 27 df fa 9c d4 ff 57 69 99 98   ..?..c'.....Wi..
+03a0  6b 57 cc 54 5b 8d 3b 0d e0 25 26 6d b6 5c f6 17   kW.T[.;..%&m.\..
+03b0  c8 2e c2 5b 8c 9a 6f 8c 56 b9 31 84 14 a6 52 0c   ...[..o.V.1...R.
+03c0  58 00 bd 1c 12 f4 59 4b e9 0e 8a 72 e5 e5 ad 8c   X.....YK...r....
+03d0  10 92 1e 08 27 79 be 4d f3 59 b4 23 81 5d 38 e1   ....'y.M.Y.#.]8.
+03e0  42 4a 0a fb be 5e 3e 41 64 aa a2 95 49 72 39 04   BJ...^>Ad...Ir9.
+03f0  fb 08 b2 9f e4 11 58 e8 82 66 09 af 41 42 d2 a0   ......X..f..AB..
+0400  4c ce 91 a0 5e 0a 76 8b 2c ea 78 47 2a e9 59 17   L...^.v.,.xG*.Y.
+0410  36 83 0a 61 f3 02 74 ae 13 15 53 bf ac 5f 3c 40   6..a..t...S.._<@
+0420  84 61 22 fd 40 3a 44 3e 68 0d bb 4e 05 b2 f3 57   .a".@:D>h..N...W
+0430  98 31 11 4b c8 34 12 ad 1f 83 23 73 d5 23 8a 81   .1.K.4....#s.#..
+0440  69 e9 14 e9 04 4c c9 50 18 f1 dc 9b 11 0a 80 cf   i....L.P........
+0450  2e f3 c9 a2 b0 30 65 c3 11 79 d7 b7 c8 3d e5 e7   .....0e..y...=..
+0460  bb 18 db 27 62 9c c1 89 b4 0b b5 5c 97 a5 3e e6   ...'b......\..>.
+0470  79 83 ae f6 84 cd f4 2b 9a 08 57 da 3f 94 7d 74   y......+..W.?.}t
+0480  4b aa 9f 91 9f fc f7 68 ac e8 a8 a2 03 a2 a2 fc   K......h........
+0490  e3 7f 85 14 4e 9f 09 b9 a7 ed 85 77 70 af c9 09   ....N......wp...
+04a0  40 81 4e a9 e4 46 8d dc 05 9a 04 07 f3 ef df bf   @.N..F..........
+04b0  90 c8 cd 58 ae 05 a4 57 5c 0f f3 1d 9e 25 b5 dc   ...X...W\....%..
+04c0  69 5b c4 9c bd ef f1 d8 c6 23 ac 33 ca 08 ca 10   i[.......#.3....
+04d0  29 1b 31 f6 9e cc b5 d2 12 4e 8e                  ).1......N.
+
+No.     Time           Source                Destination           Protocol Length Info
+    116 3.564339       192.168.100.158       142.250.193.138       UDP      1140   62536 → 443 Len=1098
+
+Frame 116: 1140 bytes on wire (9120 bits), 1140 bytes captured (9120 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 142.250.193.138
+User Datagram Protocol, Src Port: 62536, Dst Port: 443
+Data (1098 bytes)
+
+0000  48 f7 0b fd 94 70 e6 02 08 80 d7 8e de 69 fa 19   H....p.......i..
+0010  12 90 b9 f3 7a ee 95 dc 75 8a de e4 70 12 e5 bf   ....z...u...p...
+0020  b9 2e 28 71 a7 b6 89 14 39 40 4d af f9 66 89 37   ..(q....9@M..f.7
+0030  52 fa 8d ec 9a 11 7c 19 0f f6 0e ee 8d dd f4 04   R.....|.........
+0040  2b 31 23 aa 97 77 4b 09 e4 a2 91 3d 66 c5 32 da   +1#..wK....=f.2.
+0050  e6 74 16 08 29 37 64 88 40 51 02 35 57 93 0d 90   .t..)7d.@Q.5W...
+0060  65 c6 c2 7b 21 9c ee 64 69 f8 88 69 b0 11 43 ef   e..{!..di..i..C.
+0070  6f 91 b3 45 86 50 a7 4a dd eb d1 21 ac 22 ea d7   o..E.P.J...!."..
+0080  d6 59 4e 37 3b e9 f4 24 a1 1b d4 c3 eb a3 87 ad   .YN7;..$........
+0090  c2 22 be 16 a4 5c 55 ca cc c0 28 f3 f8 41 ea e2   ."...\U...(..A..
+00a0  a2 46 97 45 b6 71 a5 62 f1 04 d3 d2 ca e4 dd f7   .F.E.q.b........
+00b0  45 dc 8c 5b 8d 6d d5 74 dc a6 00 72 2c 67 57 dd   E..[.m.t...r,gW.
+00c0  5c 6e 65 d8 da 09 44 a8 68 a9 0a b1 4e fe 7e d1   \ne...D.h...N.~.
+00d0  97 0a 95 5d 1d 56 67 f9 1b 0e 13 f3 63 33 bb f1   ...].Vg.....c3..
+00e0  65 f3 2e 23 21 97 b7 9a e0 9a 77 e6 36 48 31 91   e..#!.....w.6H1.
+00f0  1e 70 e6 fd cc 67 16 36 36 64 77 6f be 04 ce 92   .p...g.66dwo....
+0100  75 9d d6 d2 2b ea d8 cb b9 36 a4 e0 a3 f8 2f 3e   u...+....6..../>
+0110  42 61 0e 70 4c 2e 79 48 d2 69 9c 13 c4 e3 b8 7f   Ba.pL.yH.i......
+0120  23 31 3c 9a 82 cf 3d bf 78 c9 e2 60 7e 59 df 65   #1<...=.x..`~Y.e
+0130  fd e2 f5 39 c3 55 d2 e7 b9 30 e9 a4 91 b5 5a 81   ...9.U...0....Z.
+0140  88 f5 94 d9 f2 79 68 d1 65 c8 6c f6 ac b2 67 be   .....yh.e.l...g.
+0150  79 17 7c bb 82 2c d7 f2 86 22 f6 c4 32 d3 31 f4   y.|..,..."..2.1.
+0160  f5 5f bc 47 bd 87 32 80 92 38 0b ab 04 64 bf 07   ._.G..2..8...d..
+0170  b5 4c 1b 67 4c ec 80 23 65 d6 e5 89 7f a0 6b 43   .L.gL..#e.....kC
+0180  e6 ac 17 1f 71 d0 f3 13 14 e6 2c 5d 0c 62 9a 14   ....q.....,].b..
+0190  3a a7 db dc 25 cb 5d c0 b9 0f f2 b8 ca 68 1f b0   :...%.]......h..
+01a0  45 6f 31 a2 5e de 3f 68 33 a6 7d 49 31 72 3e f6   Eo1.^.?h3.}I1r>.
+01b0  ec 17 10 a5 fb 11 dd 36 cd 7c 41 33 b7 4a 61 8b   .......6.|A3.Ja.
+01c0  a3 d0 2a df 76 fc 6b 53 a5 a7 4b ad 5a d2 df 22   ..*.v.kS..K.Z.."
+01d0  30 eb 6d eb 8b 00 0e 79 04 62 0e c5 2f e6 3a 7a   0.m....y.b../.:z
+01e0  db ed 1c 3d 73 ce 33 bf 3c a3 03 6b 94 71 df 6f   ...=s.3.<..k.q.o
+01f0  cc 5c 07 31 4d 4b 06 69 c8 8c 83 9d 26 9d 4b bd   .\.1MK.i....&.K.
+0200  8c 39 fc 4b 58 bd f2 71 5a 97 bb 6b 97 a0 d2 01   .9.KX..qZ..k....
+0210  b3 ce 3c 63 06 de d1 25 c5 2e 8d de ec 28 61 63   ..<c...%.....(ac
+0220  dc ac b7 bd bd 55 be 4e 18 c4 12 71 1e 77 71 0e   .....U.N...q.wq.
+0230  e5 3a 30 bb 4e e5 bc b5 24 d1 60 4c 9d b5 35 82   .:0.N...$.`L..5.
+0240  07 ad 24 5d 43 5d c4 87 68 d8 2c a9 b4 ea 15 89   ..$]C]..h.,.....
+0250  04 d2 e1 5c 4e 3b 25 8b 18 4e 9a ab 33 ce ae b1   ...\N;%..N..3...
+0260  d0 7f c7 6a 87 d5 44 33 71 bd 7a 1b eb 65 22 5d   ...j..D3q.z..e"]
+0270  cd ee 19 3d a9 6a e3 3a ce ac db 85 c8 3b dd 25   ...=.j.:.....;.%
+0280  df f2 9e af c9 28 f5 58 13 e0 c4 00 d4 5f 51 84   .....(.X....._Q.
+0290  d0 2a 60 fa 99 af 0c c7 ab 0a f8 8b ab e2 90 cd   .*`.............
+02a0  4a 86 f0 6f bb f2 5a 93 52 63 c4 da dc 30 1b 1d   J..o..Z.Rc...0..
+02b0  9a c6 ac b8 c1 53 1d d5 22 0d f3 12 bc 00 e1 e8   .....S..".......
+02c0  9d fc 93 99 f2 45 d3 2c 52 3c e5 4b 9a 17 55 40   .....E.,R<.K..U@
+02d0  6b 67 9e 6c d1 5a 1b 88 92 89 78 11 c2 80 5f 5b   kg.l.Z....x..._[
+02e0  e5 36 46 2a 6c 28 c6 8a 8b cb 4f 68 82 b4 a8 92   .6F*l(....Oh....
+02f0  da 17 a5 30 00 91 c3 e8 c9 48 2c 47 6b 7b 8a d0   ...0.....H,Gk{..
+0300  55 3e 10 e1 ab 7c 9d 60 07 03 26 1e 8a 09 a9 b1   U>...|.`..&.....
+0310  03 fd d0 ce d1 da bf 2a 0c cd 50 2f c6 c4 e0 42   .......*..P/...B
+0320  bd ad ea 66 75 60 ea a9 7e ab f6 d6 58 f2 64 ee   ...fu`..~...X.d.
+0330  e1 46 c7 2c 07 84 0f 3b 26 a7 5e c1 cb 08 59 20   .F.,...;&.^...Y 
+0340  60 7a 07 a1 86 e1 a7 dc 41 58 97 1a 1f 52 3d 07   `z......AX...R=.
+0350  26 0e 4f 50 15 39 e2 c1 13 31 a2 af 96 63 cd 82   &.OP.9...1...c..
+0360  d7 02 fa 1f 6c 65 9f cf c2 71 3a e2 8c 2e c9 cd   ....le...q:.....
+0370  9e 0e 9c 3e f1 fe ef da 8e f5 b4 a3 38 ce c6 ef   ...>........8...
+0380  01 27 c6 e4 15 2c 8a ef 7d 51 09 88 57 90 91 30   .'...,..}Q..W..0
+0390  27 a8 18 58 98 80 c5 da 26 97 2f 71 48 57 d4 ca   '..X....&./qHW..
+03a0  30 bc f1 da 13 63 19 d0 db f6 b1 e8 94 79 1f 88   0....c.......y..
+03b0  dc ca b2 5b 09 9f 62 ae 3c 84 91 26 6d e2 e9 de   ...[..b.<..&m...
+03c0  aa 34 b8 75 f5 d4 09 72 ff 9c 0e 78 28 95 e3 e6   .4.u...r...x(...
+03d0  5c 64 40 b4 88 25 17 b6 f8 9c 6b 0d ef 2e 7a b1   \d@..%....k...z.
+03e0  44 10 72 d7 3b bb 7f c5 78 ca 2c 2b 8c 2f ae 42   D.r.;...x.,+./.B
+03f0  33 ea b6 71 73 f0 df 27 5a 01 8d 38 f2 a9 a6 da   3..qs..'Z..8....
+0400  f0 40 7e c7 2b 3a ae 72 4d 3a 93 36 a5 74 10 36   .@~.+:.rM:.6.t.6
+0410  51 10 ee 1e 97 ef 3a a8 98 33 e8 ff 6d 04 2c 18   Q.....:..3..m.,.
+0420  58 5e a4 b7 c5 09 09 ef 0a c7 5e 86 bf 91 df f9   X^........^.....
+0430  10 03 1f d1 94 0b 2a ea ed 46 3f 18 56 e5 75 d5   ......*..F?.V.u.
+0440  5b c2 78 44 04 84 fc c2 a2 0b                     [.xD......
+
+No.     Time           Source                Destination           Protocol Length Info
+    117 3.577211       192.168.100.158       192.168.90.200        TCP      55     31422 → 80 [ACK] Seq=1 Ack=1 Win=252 Len=1
+
+Frame 117: 55 bytes on wire (440 bits), 55 bytes captured (440 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 192.168.90.200
+Transmission Control Protocol, Src Port: 31422, Dst Port: 80, Seq: 1, Ack: 1, Len: 1
+
+No.     Time           Source                Destination           Protocol Length Info
+    118 3.578041       192.168.90.200        192.168.100.158       TCP      66     80 → 31422 [ACK] Seq=1 Ack=2 Win=60 Len=0 SLE=1 SRE=2
+
+Frame 118: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: BaudDataComm_d6:a1:6c (98:45:62:d6:a1:6c), Dst: Private_02:05:da (90:6f:18:02:05:da)
+Internet Protocol Version 4, Src: 192.168.90.200, Dst: 192.168.100.158
+Transmission Control Protocol, Src Port: 80, Dst Port: 31422, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    135 3.792751       192.168.90.253        192.168.100.158       TCP      72     5527 → 39743 [PSH, ACK] Seq=106 Ack=63 Win=319 Len=18
+
+Frame 135: 72 bytes on wire (576 bits), 72 bytes captured (576 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: BaudDataComm_d6:a1:6c (98:45:62:d6:a1:6c), Dst: Private_02:05:da (90:6f:18:02:05:da)
+Internet Protocol Version 4, Src: 192.168.90.253, Dst: 192.168.100.158
+Transmission Control Protocol, Src Port: 5527, Dst Port: 39743, Seq: 106, Ack: 63, Len: 18
+Data (18 bytes)
+
+0000  04 00 0c 00 00 00 32 73 31 06 3a d5 9d be 0e 09   ......2s1.:.....
+0010  0b 00                                             ..
+
+No.     Time           Source                Destination           Protocol Length Info
+    136 3.792751       192.168.90.253        192.168.100.158       TCP      72     5527 → 39743 [PSH, ACK] Seq=124 Ack=63 Win=319 Len=18
+
+Frame 136: 72 bytes on wire (576 bits), 72 bytes captured (576 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: BaudDataComm_d6:a1:6c (98:45:62:d6:a1:6c), Dst: Private_02:05:da (90:6f:18:02:05:da)
+Internet Protocol Version 4, Src: 192.168.90.253, Dst: 192.168.100.158
+Transmission Control Protocol, Src Port: 5527, Dst Port: 39743, Seq: 124, Ack: 63, Len: 18
+Data (18 bytes)
+
+0000  04 00 0c 00 00 00 32 73 31 06 0e 4b 9e be 0e 09   ......2s1..K....
+0010  0b 00                                             ..
+
+No.     Time           Source                Destination           Protocol Length Info
+    137 3.792852       192.168.100.158       192.168.90.253        TCP      54     39743 → 5527 [ACK] Seq=63 Ack=142 Win=16381 Len=0
+
+Frame 137: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 192.168.90.253
+Transmission Control Protocol, Src Port: 39743, Dst Port: 5527, Seq: 63, Ack: 142, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    139 3.792992       192.168.100.158       192.168.90.253        TCP      72     39743 → 5527 [PSH, ACK] Seq=81 Ack=142 Win=16381 Len=18
+
+Frame 139: 72 bytes on wire (576 bits), 72 bytes captured (576 bits) on interface \Device\NPF_{F311C869-54A2-4CAD-9DD1-9A6A3784DF91}, id 0
+Ethernet II, Src: Private_02:05:da (90:6f:18:02:05:da), Dst: BaudDataComm_bb:a4:99 (98:45:62:bb:a4:99)
+Internet Protocol Version 4, Src: 192.168.100.158, Dst: 192.168.90.253
+Transmission Control Protocol, Src Port: 39743, Dst Port: 5527, Seq: 81, Ack: 142, Len: 18
+Data (18 bytes)
+
+0000  03 00 0c 00 00 00 32 73 31 06 0e 4b 9e be 0e 09   ......2s1..K....
+0010  0b 00                                             ..
