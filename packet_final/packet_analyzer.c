@@ -61,6 +61,8 @@ void display_packet_info(const EthernetII_IPv4_Packet *packet) {
            packet->eth.src_mac[0], packet->eth.src_mac[1], packet->eth.src_mac[2],
            packet->eth.src_mac[3], packet->eth.src_mac[4], packet->eth.src_mac[5]);
 
+
+    printf("IPv4 Header :\n");
     struct in_addr src, dest;
     src.s_addr = packet->ip.src_ip;
     dest.s_addr = packet->ip.dest_ip;
@@ -123,7 +125,7 @@ int main() {
                 token = strtok(NULL, " ");
             }
 
-            // If a full packet is read, parse and process it
+            // If a 34 bytes are read, parse and process it
             if (packet_len == MAX_BYTES) {
                 EthernetII_IPv4_Packet *parsed_packet = parse_raw_packet(raw_packet, MAX_BYTES);
                 if (parsed_packet) {
