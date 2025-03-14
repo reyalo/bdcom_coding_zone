@@ -1,0 +1,51 @@
+#ifndef PACKET_ANALYZER_H
+#define PACKET_ANALYZER_H
+
+#include <stdint.h>
+#include <stdio.h>
+
+/* Constants */
+#define MAX_LINE 256
+#define MAX_BYTES 34
+
+/* Structure Definitions */
+#pragma pack(1)  // Ensure no structure padding
+
+typedef struct {
+    uint8_t  dest_mac[6];           // Destination MAC Address
+    uint8_t  src_mac[6];            // Source MAC Address
+    uint16_t ethertype;             // EtherType (IPv4: 0x0800)
+} EthernetIIHeader;
+
+typedef struct {
+    uint8_t  ihl:4;                 // Internet Header Length (4 bits)
+    uint8_t  version:4;             // IPv4 Version (4 bits)
+    uint8_t  tos;                   // Type of Service
+    uint16_t total_length;          // Total Length (bytes)
+    uint16_t identification;
+    uint16_t flags_frag_offset;
+    uint8_t  ttl;                   // Time To Live
+    uint8_t  protocol;              // Protocol (TCP=6, UDP=17, ICMP=1)
+    uint16_t header_checksum;
+    uint32_t src_ip;                // Source IP Address
+    uint32_t dest_ip;               // Destination IP Address
+} IPv4Header;
+
+typedef struct Packet {
+    EthernetIIHeader eth;
+    IPv4Header ip;
+    int ref_count;
+    struct Packet *next;
+} EthernetII_IPv4_Packet;
+
+#pragma pack(0)  // Restore default alignment
+
+/* Function Declarations */
+unsigned char hex_to_byte(const char *hex);
+int find_and_increment(EthernetII_IPv4_Packet *head, unsigned int src_ip, unsigned int dest_ip);
+EthernetII_IPv4_Packet *parse_raw_packet(const uint8_t *raw_packet, size_t length);
+void display_packet_info(const EthernetII_IPv4_Packet *packet);
+void process_packet(EthernetII_IPv4_Packet **head, EthernetII_IPv4_Packet *packet, int *total_packets);
+void free_packet_list(EthernetII_IPv4_Packet *head);
+
+#endif /* PACKET_ANALYZER_H */

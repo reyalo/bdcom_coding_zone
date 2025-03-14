@@ -1,0 +1,286 @@
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 128 bytes
+  Identification: 0x9A56
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 1
+  Fragment Offset: 4
+  Time to Live: 128
+  Protocol: UDP (17)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.195.99
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 330 bytes
+  Identification: 0x9A57
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: UDP (17)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.195.99
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 1271 bytes
+  Identification: 0x1F9C
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: UDP (17)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.193.138
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 1126 bytes
+  Identification: 0x1F9D
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: UDP (17)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.193.138
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 41 bytes
+  Identification: 0x514A
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: TCP (6)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 192.168.90.200
+
+
+Ethernet II Frame:
+  Destination MAC: 90:6F:18:02:05:DA
+  Source MAC: 98:45:62:D6:A1:6C
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 52 bytes
+  Identification: 0x52FF
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 63
+  Protocol: TCP (6)
+  Header Checksum: 0xA80D
+  Source IP: 192.168.90.200
+  Destination IP: 192.168.100.158
+
+
+Ethernet II Frame:
+  Destination MAC: 90:6F:18:02:05:DA
+  Source MAC: 98:45:62:D6:A1:6C
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 58 bytes
+  Identification: 0xC1DB
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 254
+  Protocol: TCP (6)
+  Header Checksum: 0x79F5
+  Source IP: 192.168.90.253
+  Destination IP: 192.168.100.158
+
+
+Ethernet II Frame:
+  Destination MAC: 90:6F:18:02:05:DA
+  Source MAC: 98:45:62:D6:A1:6C
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 58 bytes
+  Identification: 0xC1DC
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 254
+  Protocol: TCP (6)
+  Header Checksum: 0x79F4
+  Source IP: 192.168.90.253
+  Destination IP: 192.168.100.158
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 4
+  IHL: 20 bytes
+  Type of Service: 0x00
+  Total Length: 40 bytes
+  Identification: 0xC162
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: TCP (6)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 192.168.90.253
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+  EtherType: 0x0800
+
+IPv4 Header:
+  Version: 6
+  IHL: 32 bytes
+  Type of Service: 0x00
+  Total Length: 58 bytes
+  Identification: 0xC164
+  Flags:
+    Reserved: 0
+    Don't Fragment: 1
+    More Fragments: 0
+  Fragment Offset: 0
+  Time to Live: 128
+  Protocol: TCP (6)
+  Header Checksum: 0x0000
+  Source IP: 192.168.100.158
+  Destination IP: 192.168.90.253
+
+
+Total Packets: 6
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+IPv4 Header:
+  Source IP: 192.168.100.158
+  Destination IP: 192.168.90.253
+  Ref Count: 2
+
+
+Ethernet II Frame:
+  Destination MAC: 90:6F:18:02:05:DA
+  Source MAC: 98:45:62:D6:A1:6C
+IPv4 Header:
+  Source IP: 192.168.90.253
+  Destination IP: 192.168.100.158
+  Ref Count: 2
+
+
+Ethernet II Frame:
+  Destination MAC: 90:6F:18:02:05:DA
+  Source MAC: 98:45:62:D6:A1:6C
+IPv4 Header:
+  Source IP: 192.168.90.200
+  Destination IP: 192.168.100.158
+  Ref Count: 1
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+IPv4 Header:
+  Source IP: 192.168.100.158
+  Destination IP: 192.168.90.200
+  Ref Count: 1
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+IPv4 Header:
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.193.138
+  Ref Count: 2
+
+
+Ethernet II Frame:
+  Destination MAC: 98:45:62:BB:A4:99
+  Source MAC: 90:6F:18:02:05:DA
+IPv4 Header:
+  Source IP: 192.168.100.158
+  Destination IP: 142.250.195.99
+  Ref Count: 2
+
+
