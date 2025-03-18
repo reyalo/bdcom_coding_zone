@@ -76,9 +76,9 @@ void display_packet_info(const EthernetII_IPv4_Packet *packet) {
     // Display individual flags
     printf("  Flags:\n");
     printf("    Reserved: %d\n", packet->ip.reserved_flag);
-    printf("    Don't Fragment: %x\n", packet->ip.df_flag);
-    printf("    More Fragments: %x\n", packet->ip.mf_flag);
-    printf("  Fragment Offset: %x\n", (packet->ip.frag_offset_high << 8) | packet->ip.frag_offset_low);
+    printf("    Don't Fragment: %d\n", packet->ip.df_flag);
+    printf("    More Fragments: %d\n", packet->ip.mf_flag);
+    printf("  Fragment Offset: %d\n", 8*((packet->ip.frag_offset_high << 8) | packet->ip.frag_offset_low));
 
     printf("  Time to Live: %d\n", packet->ip.ttl);
     printf("  Protocol: ");
