@@ -20,6 +20,16 @@ int main(void){
     // printf("%hd, %hd, %hd\n", a, b, c);
     // printf("%hhd, %hhd, %hhd\n", a, b, c);
 
+
+    char *str1 = "A";
+char *str2 = "ABC";
+char *str3 = "ABCDEFGH";
+
+printf("start:%5s, %.5s, %5.6s\n", str1, str1, str1);       // start: ****A   , A    , ****A
+printf("start:%5s, %.5s, %5.6s\n", str2, str2, str2);       // start: **ABC   , ABC  , **ABC
+printf("start:%5s, %.5s, %5.6s\n", str3, str3, str3);       // start: ABCDEFGH, ABCDE, ABCDEF
+printf("start:%5s, %.5s, %7.4s\n", str3, str3, str3);       // start: ABCDEFGH, ABCDE, ***ABCD
+
 }
 
 /*
@@ -49,7 +59,7 @@ int main(void){
 
     char str1[] = "Hello";                    // if comment out this line,
     char str2[] = {'H', 'E', 'L', 'L', 'O'};     // strlen(str2 will be 10)
-    printf("%lu\n", strlen(str2));               // min(5, ram_size) undefined behavior
+    printf("%lu\n", strlen(str2));               // max(5, ram_size) undefined behavior
     printf("%lu\n", sizeof(str2));               // 5
 
 4.
@@ -60,20 +70,22 @@ int main(void){
 
 
 5.
-har *str1 = "A";
+char *str1 = "A";
 char *str2 = "ABC";
 char *str3 = "ABCDEFGH";
 
 printf("start:%5s, %.5s, %5.6s\n", str1, str1, str1);       // start: ****A   , A    , ****A
 printf("start:%5s, %.5s, %5.6s\n", str2, str2, str2);       // start: **ABC   , ABC  , **ABC
 printf("start:%5s, %.5s, %5.6s\n", str3, str3, str3);       // start: ABCDEFGH, ABCDE, ABCDEF
+printf("start:%5s, %.5s, %5.6s\n", str3, str3, str3);       // start: ABCDEFGH, ABCDE, ***ABCD
 
 6.
 char str13[11] = "Hello";
     char str14[3] = {'J', 'I', 'M'};    // str14 = not null terminated
     strcat(str13, str14);               // undefined behavior
     puts(str13);                        // strcat(dst, src){
-                                    ;   //     strcpy(dst + strlen(dst), src);
+                                    ;   //    *p = memcpy(dst + strlen(dst), src, strlen(src));
+                                        //    *p = '\0';
                                     ;   //     return dst;
 
 
@@ -82,15 +94,15 @@ unsigned char a = -1;
 unsigned short b = -1;
 unsigned int c = -1;
 
-printf("%d, %d, %d\n", a, b, c);
-printf("%u, %u, %u\n", a, b, c);
-printf("%hd, %hd, %hd\n", a, b, c);
-printf("%hhd, %hhd, %hhd\n", a, b, c);
+printf("%d, %d, %d\n", a, b, c);            // 255 -1+2^16 -1
+printf("%u, %u, %u\n", a, b, c);            // 255 -1+2^16 -1+2^32
+printf("%hd, %hd, %hd\n", a, b, c);         // 255 -1      -1
+printf("%hhd, %hhd, %hhd\n", a, b, c);      // -1  -1      -1
 
 
 8.
 unsigned char a = 0x33, b = 0x55;
-printf("%d %d %d %d\n",~a, !b, a & b, a || b, a ^ b);
+printf("%d %d %d %d\n",~a, !b, a & b, a || b, a ^ b);   // -52 0 17 1 102
 
 
 9.
@@ -98,7 +110,7 @@ char a = 150, b = 50;
 unsigned char c = 200, d = -60;
 unsigned char e = 200, f = 150;
 
-printf("%d %d %d\n", a + b, c - d, c + e - f);
+printf("%d %d %d\n", a + b, c - d, c + e - f);          // -56 4 250
 
 
 10.
@@ -108,8 +120,8 @@ unsigned int sum_elements(unsigned int a[], unsigned int length){
     char i;
     unsigned char result = 0;
 
-    for(i = 0; i < length; i++){
-        result += a[i];
+    for(i = 0; i <= length - 1; i++){
+        result += a[i];                 // i range 0~127 && -128~0 .... infinite time.
     }
     return result;
 }

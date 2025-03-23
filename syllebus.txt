@@ -7,6 +7,10 @@
 3. variable_prefix      
 4. mem_x                done
 5. le/be (number)       done
-6. format specifier     
-7. struct               
+6. format specifier     done
+7. struct 
+8. dynamic allocation   done
+9. integer promotion  
+10. precidence
+11. assembly syntax       
 

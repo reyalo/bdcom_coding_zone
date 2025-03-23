@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "2.C": "cpp"
+        "2.C": "cpp",
+        "custom.h": "c"
     }
 }
