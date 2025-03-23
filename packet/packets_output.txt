@@ -1,9 +1,0 @@
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 168.0.63.21 | DIP: 151.176.69.48 | Ref Count: 2
-SMAC: d6:a1:6c:08:00:45 | DMAC: 02:05:da:98:45:62 | SIP: 168.0.151.155 | DIP: 63.215.84.0 | Ref Count: 1
-SMAC: d6:a1:6c:08:00:45 | DMAC: 02:05:da:98:45:62 | SIP: 168.0.151.155 | DIP: 63.215.83.255 | Ref Count: 1
-SMAC: d6:a1:6c:08:00:45 | DMAC: 02:05:da:98:45:62 | SIP: 168.0.80.122 | DIP: 190.194.95.237 | Ref Count: 1
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 168.0.190.0 | DIP: 80.71.121.15 | Ref Count: 1
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 250.0.72.1 | DIP: 187.4.82.122 | Ref Count: 1
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 250.0.72.1 | DIP: 187.4.227.122 | Ref Count: 1
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 250.0.36.1 | DIP: 187.1.54.120 | Ref Count: 1
-SMAC: 02:05:da:08:00:45 | DMAC: bb:a4:99:90:6f:18 | SIP: 250.0.36.1 | DIP: 187.0.108.120 | Ref Count: 1

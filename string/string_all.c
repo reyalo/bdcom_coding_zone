@@ -44,9 +44,8 @@ int main(){
     print_char(str3, sizeof(str3));
     print_char(str4, sizeof(str4));
 
-
-
-
+    strcpy(str3, "123");
+    print_char(str3, sizeof(str3));
 
     //_________________________________________strcpy(Each Analysis Independent)________________________________________________
 

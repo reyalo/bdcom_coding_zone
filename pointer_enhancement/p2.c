@@ -8,7 +8,7 @@ typedef int** IntPtrPtr;
 typedef int (*ArrayPtr)[5];
 typedef int* PtrArray[5];
 
-// For array of pointers (a)
+// Different ways to declare function parameters for a one-dimensional array
 void funca1(int a[]) {}          // Equivalent to int *a
 void funca2(int a[ARR_NUM]) {}   // Also equivalent to int *a
 void funca3(int *a) {}           // Pointer notation (same as int a[])
@@ -58,8 +58,7 @@ int main(int argc, char *argv[], char *envp[])
     funca2(a);
     funca3(a);
     funca4(a);
-    funca4(a);
-    funca6(a);
+    funca5(a);
 
     // Array of pointers (b) calls
     funcb1(b);

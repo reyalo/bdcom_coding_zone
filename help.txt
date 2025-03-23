@@ -1,1 +1,3 @@
 gcc -m32 -S p9.c -o p9.s
+grep -rl "main:" .
+find . -type f ! -name "*.*" -delete

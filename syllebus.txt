@@ -1,0 +1,12 @@
+
+
+
+
+1. review_3             done
+2. assembly             done
+3. variable_prefix      
+4. mem_x                done
+5. le/be (number)       done
+6. format specifier     
+7. struct               
+
