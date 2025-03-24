@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#pragma pack(8)
+//#pragma pack(8)
 struct Example1 {   // 64 bit: expected 12 // 32 bit: 12
     char a;   // 1 byte
     int b;    // 4 bytes
@@ -18,6 +18,14 @@ struct Example3 {           // 64 bit : size  24, 32 bit : 16
     char c;    // 4 bytes
 };
 
+struct Example4 {           // 64 bit : size  24, 32 bit : 16
+    int a;          // 4 byte
+    // 4 
+    long long b; // 8 bytes
+    char c;    // 1 bytes
+    // 1 
+    short d;   // 2
+};
 
 
 struct Misaligned {          // 64 bit : size 16,  32 bit : 16
@@ -29,6 +37,13 @@ struct Misaligned {          // 64 bit : size 16,  32 bit : 16
     short f;
 };
 
+enum RGB
+{
+    R = 100000,
+    G,
+    B
+};
+
 // struct Aligned {
 //     char a;   // 1 byte
 //     char c;   // 1 byte
@@ -36,12 +51,51 @@ struct Misaligned {          // 64 bit : size 16,  32 bit : 16
 //     int b;    // 4 bytes (properly aligned)
 // };
 
+
+struct AA{           // 64 bit : size  24, 32 bit : 16
+    int a;          // 4 byte
+    long long b; // 8 bytes
+    char c;    // 1 bytes
+    // 1 
+    short d;   // 2
+};
+
+struct BB{           // 64 bit :40 , 32 bit : 24
+    short a;          // 4 byte
+    // 2
+    struct AA aa;       // 32: 16(4) 64:24(8)
+
+    char c;    // 1 bytes
+    // 3
+};
+
+#pragma pack(1)
+
+struct CC{          // 32:19 64: 27
+    short a;
+    struct AA aa;   // 32:16(4), 64:24(8)
+    char c;
+};
+
+struct AAA{         // 32 : 19 64:27
+    short a;
+    struct AA aa;   // 32:16(4)
+    char c;
+};
+
+struct BBB{         // 32:20  64:28
+    struct AAA aaa; // 32:19
+    char c;         
+};
+
+#pragma pack();
+
 int main() {
 
-    // struct Misaligned x;
-    // printf("%p \n", &x);
+    printf("%lu\n", sizeof(enum RGB));
+
     // printf("Size of Misaligned: %lu bytes\n", sizeof(struct Misaligned)%16);
-    printf("%u %u %u %u\n", sizeof(struct Example1), sizeof(struct Example2), sizeof(struct Example3), sizeof(struct Misaligned));
+    printf("%lu %lu %lu %lu %lu\n", sizeof(struct AA), sizeof(struct BB), sizeof(struct CC), sizeof(struct AAA), sizeof(struct BBB));
     // printf("Size of Aligned: %lu bytes\n", sizeof(struct Aligned));
     return 0;
 }

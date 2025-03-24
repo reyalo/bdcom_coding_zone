@@ -2,15 +2,21 @@
 
 
 
-1. review_3             done
-2. assembly             done
-3. variable_prefix      
-4. mem_x                done
-5. le/be (number)       done
-6. format specifier     done
-7. struct 
-8. dynamic allocation   done
-9. integer promotion  
-10. precidence
-11. assembly syntax       
+1. review_3                 done
+2. assembly                 done
+3. variable_prefix          done
+4. mem_x                    done
+5. le/be (number)           done
+6. format specifier         done
+7. struct                   done
+8. dynamic allocation       done
+9. integer promotion        done
+10. precidence  
+11. assembly syntax          
+12. run program without main()
+13. strlen(different_string)
+14. short circuit           done
+15. function pointer typedef
+16. switch case             done
+17. bit field               do
 
