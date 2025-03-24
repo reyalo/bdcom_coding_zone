@@ -63,9 +63,14 @@ struct AA{           // 64 bit : size  24, 32 bit : 16
 struct BB{           // 64 bit :40 , 32 bit : 24
     short a;          // 4 byte
     // 2
-    struct AA aa;       // 32: 16(4) 64:24(8)
-
     char c;    // 1 bytes
+    struct AA aa;       // 32: 16(4) 64:24(8)
+    short d;
+
+    char c;
+
+    
+
     // 3
 };
 
