@@ -1,3 +1,16 @@
 gcc -m32 -S p9.c -o p9.s
 grep -rl "main:" .
 find . -type f ! -name "*.*" -delete
+
+
+
+vim basic:
+delete all : :%d
+        line :dd
+copy   all : :%y 
+        line: dd 
+        select text : cursor + v + cursor
+paste      : P/p 
+undo       : u
+
+
