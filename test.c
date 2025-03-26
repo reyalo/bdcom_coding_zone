@@ -20,6 +20,8 @@ int main() {
     // char str1 = "JIM";
     // char str2 = {'J', 'I', 'M'};
 
+    
+
     // printf("%d\n", strcmp(str2, str1));
 
     char *str = NULL;

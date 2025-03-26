@@ -1,5 +1,0 @@
-255, 255, 255
-start:    A, A,     A
-start:  ABC, ABC,   ABC
-start:ABCDEFGH, ABCDE, ABCDEF
-start:ABCDEFGH, ABCDE,    ABCD
