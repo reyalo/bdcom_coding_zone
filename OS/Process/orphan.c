@@ -8,13 +8,12 @@ int main() {
 
     if (pid > 0) {
         // Parent process exits
-        sleep(20);
         printf("Parent (PID: %d) exiting...\n", getpid());
-        sleep(20);
+        sleep(5);
         exit(0);
     } else if (pid == 0) {
         // Child process sleeps long enough to be seen as orphan
-        sleep(20);
+        sleep(30);
         printf("Child (PID: %d), Parent (PPID: %d)\n", getpid(), getppid());
     }
 

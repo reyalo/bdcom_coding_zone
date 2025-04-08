@@ -1,26 +1,41 @@
 #include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 
 int main() {
-    // Open a non-existent device file to induce a blocking operation
-    int fd = open("/dev/non_existent_device", O_RDONLY); // This file doesn't exist
-    if (fd == -1) {
-        perror("Error opening device");
+    const char *fifo_path = "/tmp/myfifo_vfork";
+
+    // Create the named pipe (FIFO)
+    if (mkfifo(fifo_path, 0666) == -1) {
+        perror("mkfifo");
     }
 
-    printf("Process will now block indefinitely. Check 'ps' for the process state.\n");
+    pid_t pid = vfork();  // Parent suspends until child _exit or exec
 
-    // Simulate uninterruptible sleep by trying to read from the file
-    char buffer[100];
-    ssize_t bytesRead = read(fd, buffer, sizeof(buffer)); // Will block here
-    if (bytesRead == -1) {
-        perror("Error reading from device");
+    if (pid < 0) {
+        perror("vfork failed");
+        exit(EXIT_FAILURE);
     }
 
-    close(fd);  // Close the file (won't reach here unless the read succeeds)
+    if (pid == 0) {
+        // Detach from terminal (new session)
+        setsid();
+
+        // Optional: close stdin/out/err if you want it fully detached
+        close(0); close(1); close(2);
+
+        int fd = open(fifo_path, O_RDONLY); // This will block (D state)
+        if (fd >= 0) {
+            char buf[64];
+            read(fd, buf, sizeof(buf));
+            close(fd);
+        }
+        _exit(0);
+    }
+
+    // Parent (won't run until child exits due to vfork)
     return 0;
 }

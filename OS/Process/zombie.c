@@ -4,33 +4,16 @@
 
 int main() {
     pid_t pid = fork();
-    // pid_t pid2 = fork();
-    // pid_t pid3 = fork();
-
-    // if(pid > 0){
-    //     printf("Parent Process: PID = %d\n", getpid());
-    //     sleep(20);
-    // } else if(pid == 0){
-    //     printf("Child Process: PID = %d, Parent PID = %d\n", getpid(), getppid());
-    //     sleep(20);
-    //     exit(0); // Exiting child process
-    // } else {
-    //     printf("Fork failed!\n");
-    // }
 
     if (pid > 0) {
         // Parent process
         printf("Parent process sleeping... PID = %d\n", getpid());
-        // sleep(60);                   // Give time to observe the zombie
-        // sleep(10);
-        exit(0);                        // Parent exits immediately, child becomes orphan
+        sleep(60);              // Give time to observe the zombie
+
     } else if (pid == 0) {
         // Child process
-        sleep(30);
         printf("Child process exiting... PID = %d\n", getpid());
-        // exit(0); // Exits, becomes zombie until parent collects it
-        // sleep(10);
-        // exit(0);
+        exit(0);               // Exits, becomes zombie until parent collects it
     } else {
         perror("fork");
     }
