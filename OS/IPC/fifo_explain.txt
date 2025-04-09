@@ -1,0 +1,55 @@
+This table explains how FIFO (named pipes) behave in different scenarios when performing open(), read(), or write() operations. Here's a simplified explanation:
+
+1. open() Behavior
+Opening FIFO for Read-Only (O_RDONLY):
+
+If another process has opened the FIFO for writing, open() succeeds immediately.
+If no process has opened the FIFO for writing, open() blocks (waits) until a writer opens the FIFO.
+Opening FIFO for Write-Only (O_WRONLY):
+
+If another process has opened the FIFO for reading, open() succeeds immediately.
+If no process has opened the FIFO for reading, open() blocks (waits) until a reader opens the FIFO.
+Using O_NONBLOCK:
+
+If O_NONBLOCK is set, open() does not block:
+For O_RDONLY: It succeeds even if no writer exists.
+For O_WRONLY: It fails with an error (ENXIO) if no reader exists.
+2. read() Behavior
+Reading from an Empty FIFO:
+
+If a writer exists, read() blocks (waits) until data is written to the FIFO.
+If no writer exists, read() returns 0 (end-of-file).
+Using O_NONBLOCK:
+
+If O_NONBLOCK is set and the FIFO is empty:
+read() returns an error (EAGAIN) instead of blocking.
+3. write() Behavior
+Writing to a FIFO:
+If a reader exists, write() succeeds.
+If no reader exists, the process receives a SIGPIPE signal, and write() fails.
+Key Takeaways:
+Blocking Behavior:
+
+open(), read(), and write() on FIFOs can block (wait) depending on whether a corresponding reader or writer exists.
+Use O_NONBLOCK to avoid blocking.
+Errors:
+
+ENXIO: No reader exists when opening for write-only with O_NONBLOCK.
+EAGAIN: FIFO is empty when reading with O_NONBLOCK.
+End-of-File (read() returns 0):
+
+Happens when there are no writers, and the FIFO is empty.
+Example Scenarios:
+Reader Opens First:
+
+open(O_RDONLY) blocks until a writer opens the FIFO.
+Writer Opens First:
+
+open(O_WRONLY) blocks until a reader opens the FIFO.
+Reader Reads an Empty FIFO:
+
+Blocks until data is written, or returns 0 if no writer exists.
+Writer Writes Without a Reader:
+
+Fails with SIGPIPE.
+This behavior ensures synchronization between processes using FIFOs. Let me know if you need further clarification!
