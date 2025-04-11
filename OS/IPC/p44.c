@@ -9,19 +9,28 @@
 #define NUM_PROCESSES 5
 #define SEM_NAME "/order_sync_semaphore"
 
-int shared_counter = 0;  // Shared counter
 
 int main() {
+    
     // Create shared memory for `turn`
     int *turn = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE,
                      MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    int *shared_counter = mmap(NULL, sizeof(int),
+                     PROT_READ | PROT_WRITE,
+                     MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    
+    *shared_counter = 0;
     *turn = 1;  // Start with Process 1
 
+    sem_unlink(SEM_NAME);
     sem_t *sem = sem_open(SEM_NAME, O_CREAT | O_EXCL, 0644, 1);
     if (sem == SEM_FAILED) {
         perror("sem_open");
         exit(EXIT_FAILURE);
     }
+
+    // printf("Process %d (PID %d): Entering critical section.\n", 0, getpid());
 
     for (int i = 1; i <= NUM_PROCESSES; i++) {
         pid_t pid = fork();
@@ -32,8 +41,11 @@ int main() {
                 if (*turn == i) {
                     printf("Process %d (PID %d): Entering critical section.\n", i, getpid());
                     sleep(1);  // Simulate work
-                    shared_counter++;
-                    printf("Process %d (PID %d): Counter = %d\n", i, getpid(), shared_counter);
+                    int local = *shared_counter;
+                    local++;
+                    *shared_counter = local;
+                    printf("Process %d (PID %d): Counter = %d\n", i, getpid(), *shared_counter);
+
                     printf("Process %d (PID %d): Leaving critical section.\n", i, getpid());
                     (*turn)++;  // Allow next process
                     sem_post(sem);
@@ -55,6 +67,7 @@ int main() {
     sem_close(sem);
     sem_unlink(SEM_NAME);
     munmap(turn, sizeof(int));
+    printf("Final Counter: %d\n", *shared_counter);
 
     printf("All processes completed in order.\n");
     return 0;

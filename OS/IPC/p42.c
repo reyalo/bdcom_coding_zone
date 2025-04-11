@@ -1,44 +1,65 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
 
 #define NUM_THREADS 5
-#define NUM_ITERATIONS 100000
 
-int counter = 0;
-sem_t mutex;  // Semaphore for mutual exclusion
+int shared_counter = 0;
+int turn = 1;  // Start with thread 1
 
-void* increment_counter(void* arg) {
-    for (int i = 0; i < NUM_ITERATIONS; i++) {
-        sem_wait(&mutex);     // Wait (lock)
-        counter++;            // Critical section
-        sem_post(&mutex);     // Signal (unlock)
+// int t = 6;
+
+sem_t mutex;
+
+void* thread_func(void* arg) {
+    int thread_id = *(int*)arg;
+
+    while (1) {
+        sem_wait(&mutex);
+        if (turn == thread_id) {
+            turn++;  // Allow next thread
+            // Critical section
+            printf("Thread %d: Entered critical section.\n", thread_id);
+
+            sleep(rand()%6);
+            int local_var = shared_counter;
+            sleep(rand()%4);
+            local_var++;
+            shared_counter = local_var;
+
+
+            sleep(1); 
+            printf("Thread %d: Leaving critical section. Counter = %d\n", thread_id, shared_counter);
+
+            sem_post(&mutex);
+            break;   // Exit the loop and finish thread
+        }
+        sem_post(&mutex);
+        usleep(10000); // Sleep briefly to avoid busy waiting
     }
-    return NULL;
+
+    pthread_exit(NULL);
 }
 
 int main() {
     pthread_t threads[NUM_THREADS];
+    int thread_ids[NUM_THREADS];
 
-    // Initialize semaphore with 1 (acts like a mutex)
     sem_init(&mutex, 0, 1);
 
-    // Create threads
     for (int i = 0; i < NUM_THREADS; i++) {
-        pthread_create(&threads[i], NULL, increment_counter, NULL);
+        thread_ids[i] = i + 1;
+        pthread_create(&threads[i], NULL, thread_func, &thread_ids[i]);
     }
 
-    // Wait for threads to finish
     for (int i = 0; i < NUM_THREADS; i++) {
         pthread_join(threads[i], NULL);
     }
 
-    // Destroy semaphore
     sem_destroy(&mutex);
 
-    // Final value of counter
-    printf("Final counter value: %d (Expected: %d)\n", counter, NUM_THREADS * NUM_ITERATIONS);
-
+    printf("Final counter: %d\n", shared_counter);
     return 0;
 }
