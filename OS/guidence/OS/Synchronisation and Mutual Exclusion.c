@@ -18,9 +18,9 @@ void *start_routine_hello(void *args)
 	{
 		sem_wait(&sem_bdcom);
 		
-		// pthread_mutex_lock(&mu_lock);
+		pthread_mutex_lock(&mu_lock);
 		g_data++;
-		// pthread_mutex_unlock(&mu_lock);
+		pthread_mutex_unlock(&mu_lock);
 		
 		printf("Hello(%d) ", g_data);
 		sem_post(&sem_hello);
@@ -37,9 +37,9 @@ void *start_routine_bdcom(void *args)
 	{
 		sem_wait(&sem_hello);
 		
-		// pthread_mutex_lock(&mu_lock);
+		pthread_mutex_lock(&mu_lock);
 		g_data--;
-		// pthread_mutex_unlock(&mu_lock);
+		pthread_mutex_unlock(&mu_lock);
 		
 		printf("BDCOM(%d)\n", g_data);
 		
