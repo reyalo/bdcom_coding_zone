@@ -1,4 +1,50 @@
-5
-
-
-044  
+restart_syscall(<... resuming interrupted read ...>) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7fff72922860) = 0
+write(1, "Hello World\n", 12)           = 12
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0},  <unfinished ...>) = ?
++++ killed by SIGKILL +++
