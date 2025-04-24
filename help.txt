@@ -14,3 +14,13 @@ paste      : P/p
 undo       : u
 
 
+
+
+REMOTE_COMMUNICATION_MSE_TYPE_QR, client Send: a string "Hello", server : received the string and print it,
+
+REMOTE_COMMUNICATION_MSE_TYPE_QRY_ACK, server Send: "Hi" + client ip + client port, client received the string and print it,
+
+REMOTE_COMMUNICATION_MSE_TYPE_CFM, client Send: "How do yo do" + server ip + server port, server received the string and print it,
+and print it
+
+REMOTE_COMMUNICATION_MSE_TYPE_CFM_ACK, server Send: "How do yo do" + client ip + client port, client received the string and print it,
