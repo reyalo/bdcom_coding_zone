@@ -1,0 +1,105 @@
+!version 2.2.0D build 123631
+service timestamps log date
+service timestamps debug date
+!
+!
+!
+!
+!
+lldp run
+!
+!
+!
+!
+!
+spanning-tree mode rstp
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+aaa authentication login default local
+aaa authentication enable default none
+aaa authorization exec default local
+!
+username admin password 0 admin
+!
+!
+!
+!
+interface Null0
+!
+interface GigaEthernet0/1
+ switchport pvid 10
+!
+interface GigaEthernet0/2
+!
+interface GigaEthernet0/3
+!
+interface GigaEthernet0/4
+!
+interface GigaEthernet0/5
+!
+interface GigaEthernet0/6
+!
+interface GigaEthernet0/7
+!
+interface GigaEthernet0/8
+!
+interface GigaEthernet0/9
+!
+interface GigaEthernet0/10
+!
+interface VLAN1
+ ip address 192.168.10.2 255.255.255.0
+ no ip directed-broadcast
+!
+interface VLAN10
+ ip address 10.10.10.11 255.255.255.0
+ no ip directed-broadcast
+!
+!
+!
+vlan 1,10
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip exf
+!
+ipv6 exf
+!
+ip telnet attack-defense
+ip telnet enable
+!
+ip http server
+!
+!
+snmp-server community 0 nmscloud RW 
+!
+!
+!
+!
+!
+mqtt client server default pallas.bdcom.com.cn
+mqtt client enable
+!
+!
