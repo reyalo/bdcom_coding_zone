@@ -1,0 +1,56 @@
+Packet Parsing
+#Guidance 
+RFC Document: Ethernet/IP(v4), DIX frame/rfc791
+#Steps
+Replace the library libip.a I provided you in path 220D-L2-REV2_123631\apps\2228P\lib. Don't delete the old libip.a, Just rename it.
+Add a function void os_demo_mblk_handle(mblk_t *mb) in file os-demo.c. And print something in this function.
+Then, ping the switch.
+#Requirements 
+Parse mb to get all the data in it and print out. Compare with the packet captured from Wireshark
+Output :
+Echo
+
+Ethernet Packet
+    Destination Mac:92:91:20:7b: d2:51 
+    Source Mac:19:05:81:00:00:01
+IP Packet
+    Type: IP
+    Header Length: 20
+    Header Version:4
+    TOS:0
+    Total Length:60 
+    Header ID: 59408 
+    offset:0
+    TTL:128
+    Protocol: ICMP
+    Header Checksum: 20140 
+    Source IP:1.1.1.2
+    Destination IP:1.1.1.1
+ICMP Packet
+    Type: Echo Code: 0 
+    Checksum:19326
+    ID:1
+    Sequence: 477
+
+Echo Reply:
+Ethernet Packet 
+    Destination Mac:92:91:20:7b:d2:51
+    Source Mac:19:05:81:00:00:01
+    Type: IP
+IP Packet
+    Header Length:20
+    Header Version:4
+    TOS:0
+    Total Length:84 
+    Header ID: 59409 
+    offset:0 
+    TTL:128
+    Protocol: ICMP
+    Header Checksum:20115 
+    Source IP:1.1.1.2
+    Destination IP:1.1.1.1
+ICMP Packet
+    Type: Echo Reply Code: 0
+    Checksum:63617 
+    ID:18
+    Sequence:0

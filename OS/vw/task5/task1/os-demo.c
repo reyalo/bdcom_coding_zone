@@ -117,6 +117,7 @@ void os_demo_socket_text_process(void) {
     }
 
     char recvBuf[RECV_BUFFER_SIZE];
+    
     char sendBuf[SEND_BUFFER_SIZE];
 
     // initialization for message queue and event handling

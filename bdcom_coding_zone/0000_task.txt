@@ -1,0 +1,2 @@
+1. date code correction
+2. all previous day setup command note

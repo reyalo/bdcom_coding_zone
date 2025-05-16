@@ -1,0 +1,39 @@
+Programming
+    1.Create a partition memory whose count is 10 and size is student_t.
+    2. Alloc the partition memory by the command "os-demo partition alloc"
+    3. Free specified block by command "os-demo partition free "
+Check
+    1. Check the partition memory by the command "show memory partition [block addr]"
+    2. Check the value of the range from start to end in a display of the command "show memory <memory addr>"
+
+os-demo partition alloc
+os-demo partition free
+show memory partition [block addr]
+show memory <memory addr>
+
+
+#include <msgQLib.h>
+#include <eventLib.h>
+#include <taskLib.h>
+#include <ip/socket.h>
+#include <ip/inet.h>
+#include <ip/msg.h>
+#include <libfile/file_sys.h>
+
+extern unsigned long Print(char *format, ...);
+void os_demo_register_cmds(void);
+
+void os_demo_init(void)
+{
+	os_demo_register_cmds();
+	
+	os_demo_main_task_init();
+	
+	return;
+}
+
+void os_demo_main_task_init(void)
+{
+    // code
+    return;
+}
