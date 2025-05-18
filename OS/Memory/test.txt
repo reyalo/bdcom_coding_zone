@@ -37,3 +37,33 @@ void os_demo_main_task_init(void)
     // code
     return;
 }
+
+
+
+**************************16.05.25**************************
+Region Memory:
+    sys_mem_malloc/sys_mem_free:
+        1. Allocate a new memory by the command "os-demo region alloc 200" through the function sys_mem_malloc; Find out this memory in the display of the command "show memory region 3"
+        2. Free the memory that you just allocated by the command "os-demo region free " through the function sys_mem_free; Check the state of this area's memory in the display of the command "show memory region 3"
+    sys_mem_malloc/sys_mem_realloc:
+        1. Allocate a new memory by the command "os-demo region alloc 200" through the function sys_mem_malloc; Find out this memory in the display of the command "show memory region 3"
+        2. Adjust the size of the memory that you just allocated by the command "os-demo region realloc 2000" through the function sys_mem_realloc; Check the state of the old memory in the display of the command "show memory region 3" and new memory in the display of the command "show memory region 6"
+        3. Adjust the size of the memory that you just allocated by the command "os-demo region realloc 20000" through the function sys_mem_realloc; Check the state of the old memory in the display of the command "show memory region 6" and the new memory in the display of the command "show memory heap detail"
+    malloc/realloc/free:
+        1. Using the C standard library functions malloc/realloc/free, replace the functions prefixed as sys_mem. Do the experiment again.
+
+Question:
+    1.What did you learn after you finished this experiment?
+    2.What do you think needs to be paid attention to when using region memory?
+
+
+
+What I Learned from This Experiment:
+Through this experiment, I gained practical insight into how region-based memory works in VxWorks. Functions like sys_mem_malloc, sys_mem_free, and sys_mem_realloc manage memory within predefined regions rather than the system heap. These allocations are visible in real-time using commands such as show memory region X, allowing direct observation of memory usage and behavior.
+
+I learned that reallocating memory may cause VxWorks to move the block to a different region (e.g., from region 3 to region 6) if the current region lacks sufficient space. If no region can satisfy the request, the system may fall back to the generic heap, which could compromise determinism. It also became clear that when memory is moved, the old block must be explicitly freed to avoid memory leaks.
+
+By comparing this with standard malloc, realloc, and free, I realized that although the standard C library provides flexible memory management, it introduces fragmentation and non-deterministic behavior. This is problematic in real-time systems like network switches, where consistent performance and timing are critical. Region memory helps maintain predictable allocation times and reduces fragmentation, making it a more suitable choice for such systems.
+
+Overall, this experiment highlighted the importance of controlled memory management in RTOS environments for maintaining real-time guarantees.
+The standard free() function does not work within VxWorks memory regions and lacks the ability to track or manage memory allocated from region-based pools. In contrast, sys_mem_free provides proper tracking and integration within the region management framework, ensuring controlled and visible memory deallocation.
