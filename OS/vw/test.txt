@@ -54,3 +54,159 @@ ICMP Packet
     Checksum:63617 
     ID:18
     Sequence:0
+
+
+
+    Functionality Details
+    1. ARP Cache Structure
+    c
+    Copy
+    Edit
+    typedef struct {
+        char ip[16];          // "192.168.1.5"
+        char mac[18];         // "AA:BB:CC:DD:EE:FF"
+        time_t last_seen;     // Timestamp for aging
+    } arp_entry_t;
+    
+    #define ARP_CACHE_SIZE 32
+    arp_entry_t arp_cache[ARP_CACHE_SIZE];
+    2. Socket Listener Task
+    Role: Receives ARP replies (in simulated UDP format).
+    
+    Format: UDP payload contains "192.168.1.5 AA:BB:CC:DD:EE:FF"
+    
+    Steps:
+    
+    Bind to UDP port (e.g., 9999).
+    
+    Receive datagrams.
+    
+    Parse and send to message queue.
+    
+    c
+    Copy
+    Edit
+    void arp_listener_task() {
+        int sock = socket(AF_INET, SOCK_DGRAM, 0);
+        bind(sock, ...);
+        while (1) {
+            recvfrom(...);
+            parse_ip_mac(payload);
+            send_to_queue(ip, mac);
+        }
+    }
+    3. Message Queue + ARP Cache Manager Task
+    Role: Waits for ARP messages, updates cache.
+    
+    On receive:
+    
+    Check if IP exists: update MAC + last_seen.
+    
+    Else: insert new entry.
+    
+    c
+    Copy
+    Edit
+    void arp_cache_manager_task() {
+        while (1) {
+            message = receive_queue();
+            update_or_insert_cache(message.ip, message.mac);
+        }
+    }
+    4. Timer for Aging
+    Periodically (e.g., every 30 seconds), scan the cache.
+    
+    If time(NULL) - entry.last_seen > 120 → mark as expired or remove.
+    
+    c
+    Copy
+    Edit
+    void arp_cache_aging_timer() {
+        for (int i = 0; i < ARP_CACHE_SIZE; i++) {
+            if (entry in use && (now - last_seen > 120)) {
+                clear_entry(i);
+            }
+        }
+    }
+    5. Event Handling (Optional)
+    Use event flags or an event loop to:
+    
+    Flush all entries.
+    
+    Lookup a specific IP/MAC.
+    
+    Dump the cache.
+    
+    c
+    Copy
+    Edit
+    Functionality Details
+    1. ARP Cache Structure
+    
+    2. Socket Listener Task
+    Role: Receives ARP replies (in simulated UDP format).
+
+    3. Message Queue + ARP Cache Manager Task
+    Role: Waits for ARP messages, updates cache.
+    
+    4. Timer for Aging
+    Periodically (e.g., every 30 seconds), scan the cache.
+    
+    5. Event Handling (Optional)
+    Use event flags or an event loop to:
+    
+    Flush all entries.
+    
+    Lookup a specific IP/MAC.
+    
+    Dump the cache.
+    
+        
+
+
+
+########################################################
+
+The switch (or server) maintains a local ARP cache and tries to resolve IP-to-MAC mappings when it receives a packet to forward.
+
+🧩 Typical Flow
+✅ 1. Switch Receives Packet for Unknown IP
+The switch receives a packet (say, for 192.168.1.50).
+
+It checks its ARP cache for this IP.
+
+✅ If found: Get MAC and forward the packet.
+
+❌ If not found: Perform ARP resolution.
+
+✅ 2. Simulate ARP Resolution (in your project)
+Since your system is simulated, this is what happens:
+
+Switch sends a UDP-based ARP query to all devices (you simulate this via your client).
+
+The correct client/device replies back with the IP+MAC mapping.
+
+The ARP Listener Task on the switch receives that reply and passes it to the ARP Cache Manager.
+
+The manager inserts/updates the mapping in the local ARP cache.
+
+✅ 3. Switch Updates ARP Cache Table
+Now the switch can forward future packets directly using the new MAC address.
+
+✅ 4. Aging/Expiration
+If an ARP entry (IP-MAC mapping) stays in the cache longer than the allowed maximum aging time, and no refresh or update occurs,
+it should be automatically deleted by a timer-based cleanup task.
+
+The cache entry has a last_seen timestamp to allow aging/expiration.
+
+✅ 4. CLI for Admin Control
+You can access the ARP manager from a CLI (Command Line Interface) on the switch/server to do:
+
+Command	Action
+arp show	Dump current ARP cache entries
+arp flush	Clear the entire cache
+arp lookup <ip>	Show the MAC for a specific IP
+arp stats	Show total entries, ageouts, etc. (optional)
+
+These commands can trigger events or messages to the ARP manager task.
+
