@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "2.C": "cpp",
-        "custom.h": "c"
+        "custom.h": "c",
+        "os-demo.h": "c"
     }
 }

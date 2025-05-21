@@ -54,3 +54,182 @@ ICMP Packet
     Checksum:63617 
     ID:18
     Sequence:0
+
+
+
+    ##########################################OS##################################
+
+    Programming test
+    Employee information management
+    Maintain information of BDCOM Employee on VxWorks and organize them as a linked list
+
+    Operation:
+
+    Add/Update : The BDCOM Employee information can be added or updated by the socket. The Python client has already been provided.
+    delete : The BDCOM Employee information can be deleted by the command line and remove from the 
+
+    
+•
+
+Employee information management:
+Maintain information of BDCOM employees on VxWorks and organize them as a linked list.
+Operations:
+Add/Update: The BDCOM employees' information can be added or updated by the socket. The Python client has already been
+provided (\192. 168. 95. 69\documents\Training\Sample code\os-exam-part1).
+Delete: The BDCOM employees' information can be deleted by the command line and removed from the linked list.
+Aging Delete: The employee who has not been updated in a specified time (default:
+5 minutes) should be deleted and removed from the linked list.
+Display: All the employees can be displayed on the web page.
+CommandLine:
+This is the command form of deleting an employee: os-demo employee delete <employee id>
+This is the command form of aging time configuration: os-demo aging- time <3-120>. The unit is minute.
+Requirements:
+    1. The malloc should be allocated or freed by the function that is prefixed with sys_mem. Such as sys_mem_malloc. Refer to libsys/vos/vos_memory. h.
+    2. The function to operate a node in the linked list isn't limited. You can choose anyone here, the Linux head list. h, your own, or the function in libsys/queue. h.
+    To reply to the client when an employee is added/updated.
+    To give an output when an employee node is deleted due to age.
+    The add operation should be ignored when an employee already exists in the list.
+    Some helps
+    scapy web: https://scapy. readthedocs.io/en/latest/. Python client https://github.com/Zaher1307/tiny_web_server A tiny web implementation
+
+head
+Field, Length, Description
+type, 1, add/update
+length, 2, The length of the payload
+payload, Not fixed, 
+
+payload:
+Employee Payload
+Attribute, Length, description, Required, offset
+mask, 4, The value of the offset in this table starts from 1 eg. 0x21 = (1 << 5) | (1 << 0) = salary + ID, Yes, ,
+ID, 4, (unique identification, BDCOM + 3 digitals (display format)), Yes, 0
+name, 20, A string limited to 20 bytes, Add only, 1
+gender, 1, Male or Female, Add only, 2
+birthday, 20, , Add only, 3
+board-date, 20, date on board, Add only, 4
+salary, 4, , Add only, 5
+evaluation-result, 1, A/B/C or D, No, 6
+
+
+#############################################################################################
+
+Problem Description: BDCOM Employee Information Management System on VxWorks
+🎯 Goal:
+Implement a VxWorks-based system to manage BDCOM employee information. The system must:
+
+Maintain a linked list of employee records.
+
+Support adding/updating records via UDP socket communication.
+
+Allow deletion via CLI or automatic deletion based on aging time.
+
+Support displaying all employee data via a web server.
+
+🔗 Client Interaction (Python client.py):
+The client constructs and sends UDP packets to your VxWorks device:
+
+It uses Scapy to build the message in two parts:
+
+employee_HD: header
+
+type: 1 = add, 2 = update
+
+length: total length of the payload
+
+employee_PL: payload with actual employee data
+
+mask: a bitmask determining which fields are included
+
+ID: Unique 4-byte employee ID
+
+name: 20-byte string
+
+gender: 1 = Male, 2 = Female
+
+birthday: UNIX timestamp
+
+board_date: UNIX timestamp
+
+salary: 4-byte integer
+
+evaluation_result: 1 = A, 2 = B, etc.
+
+Example Packet Being Sent:
+
+python
+Copy
+Edit
+pl = employee_PL(mask=1, ID=1, evaluation_result=1)
+This packet includes only the ID and evaluation_result (based on mask 0x01).
+
+The data is sent over UDP to IP 1.1.1.1, port 8001.
+
+🛠️ Your VxWorks Implementation Must:
+1. UDP Socket Server
+Listen on port 8001.
+
+Receive and parse the packet according to the structure defined in employee_HD and employee_PL.
+
+Extract fields based on the mask value.
+
+Validate and process:
+
+If type = 1 (add):
+
+Ignore if employee already exists.
+
+Add to linked list using sys_mem_malloc().
+
+If type = 2 (update):
+
+Update existing node.
+
+Update last_updated timestamp.
+
+If not found, add new employee.
+
+Respond back to the client (e.g., “Added OK” or “Updated OK”).
+
+2. Linked List of Employees
+Each node stores:
+
+Employee details (ID, name, etc.)
+
+last_updated timestamp
+
+Use sys_mem_malloc() and sys_mem_free() for memory.
+
+Organize via your own list or libsys/queue.h.
+
+3. Aging Mechanism
+Default timeout: 5 minutes (configurable)
+
+Periodic task deletes any employee not updated within the timeout.
+
+Log each deletion.
+
+4. Command Line Interface (CLI)
+os-demo employee delete <employee id>
+→ Delete employee from list
+
+os-demo aging-time <3-120>
+→ Set aging timeout in minutes
+
+5. Web Server Display
+Host a simple HTTP server (e.g., from tiny_web_server)
+
+Display current employee list in readable HTML or JSON
+
+📁 Payload Decoding Logic
+Use the mask field to determine which fields are present. Example:
+
+Field	Bit Index	Value
+ID	0	0x01
+name	1	0x02
+gender	2	0x04
+birthday	3	0x08
+board_date	4	0x10
+salary	5	0x20
+eval_result	6	0x40
+
+So a mask like 0x21 = 0x20 | 0x01 = salary + ID.
